@@ -28,3 +28,16 @@ def ask_question(question):
 
     correct = question["options"][number - 1] == question["answer"]
     return correct
+
+questions = load_questions()
+total_questions = int(input("Enter the number of questions: "))
+random_questions = get_random_questions(questions, total_questions)
+correct = 0
+start_time = time.time()
+
+for question in random_questions:
+    is_correct = ask_question(question)
+    if is_correct:
+        correct += 1
+
+    print("-----------------")
