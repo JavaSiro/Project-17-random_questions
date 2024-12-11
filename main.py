@@ -41,3 +41,10 @@ for question in random_questions:
         correct += 1
 
     print("-----------------")
+
+completed_time = time.time() - start_time
+print("Summary")
+print("Total Questions:", total_questions)
+print("Correct Answers:", correct)
+print("Score:", str(round((correct / total_questions) * 100, 2)) + "%")
+print("Time:", round(completed_time, 2), "seconds")
